@@ -1,0 +1,68 @@
+<!-- Header -->
+<%- include("../partials/header_logout.ejs") %>
+
+    <!-- Main  -->
+    <main class="p-4">
+        <div class="mt-10 sm:mt-0">
+            <div class="md:grid md:grid-cols-3 md:gap-6">
+                <div class="md:col-span-1">
+                    <div class="px-4 sm:px-0">
+                        <h3 class="text-lg font-medium leading-6 text-gray-900">Add New Result</h3>
+                        <p class="mt-1 text-sm text-gray-600">Enter Correct Details Of Student.</p>
+                    </div>
+                </div>
+
+
+                <div class="mt-2 mr-5 md:col-span-2 md:mt-0">
+                    <form method="POST" action="/api/student" class="add_student" id="add_student">
+                        <div class="overflow-hidden shadow sm:rounded-md">
+                            <div class="bg-white px-4 py-5 sm:p-6">
+                                <div class="grid grid-cols-6 gap-6">
+                                    <div class="col-span-6 sm:col-span-4">
+                                        <label for="roll" class="block text-sm font-medium text-gray-700">Roll
+                                            No</label>
+                                        <input formControlName="roll" type="number" name="roll" id="roll"
+                                            autocomplete="given-name"
+                                            class="p-1 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-slate-500 focus:ring-slate-500 sm:text-sm"
+                                            placeholder="Enter Roll no">
+                                    </div>
+                                    <div class="col-span-6 sm:col-span-4">
+                                        <label for="name" class="block text-sm font-medium text-gray-700">Full
+                                            Name</label>
+                                        <input formControlName="name" type="text" name="name" id="name"
+                                            autocomplete="given-name"
+                                            class="p-1 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-slate-500 focus:ring-slate-500 sm:text-sm"
+                                            placeholder="Enter Full Name">
+                                    </div>
+
+                                    <div class="col-span-6 sm:col-span-4">
+                                        <label for="dob" class="block text-sm font-medium text-gray-700">Date Of
+                                            Birth</label>
+                                        <input formControlName="dob" type="date" name="dob" id="dob"
+                                            autocomplete="family-name"
+                                            class="p-1 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-slate-500 focus:ring-slate-500 sm:text-sm">
+                                    </div>
+
+                                    <div class="col-span-6 sm:col-span-4">
+                                        <label for="score" class="block text-sm font-medium text-gray-700">Score</label>
+                                        <input formControlName="score" type="text" name="score" id="score"
+                                            autocomplete="score"
+                                            class=" p-1 mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-slate-500 focus:ring-slate-500 sm:text-sm"
+                                            placeholder="Enter Total Score">
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="bg-gray-50 px-4 py-3 text-right sm:px-6">
+                                <button type="submit"
+                                    class="inline-flex justify-center rounded-md border border-transparent bg-slate-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2">Save</button>
+                            </div>
+                        </div>
+                    </form>
+
+
+    </main>
+
+    <!-- Footer -->
+    <%- include("../partials/footer.ejs") %>
